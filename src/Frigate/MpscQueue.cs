@@ -17,7 +17,7 @@ namespace Frigate
     /// barrier.
     /// </para>
     /// </summary>
-    public class MpscQueue<T> : IQueue<T> where T : class
+    public class MpscQueue<T> where T : class
     {
         private PaddedHeadAndTail paddedHeadAndTail;
 
