@@ -7,6 +7,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8DB9BBE0-759
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frigate", "src\Frigate\Frigate.csproj", "{2AE5BF94-6EDF-4E46-BEFB-67B7F314DC2F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benchmark", "benchmark", "{690ECA64-5F19-4F8D-B4D4-DB3012E98163}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netcoreapp11", "netcoreapp11", "{484F549B-7C0D-45F3-8ED5-B234440EBDAA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frigate.Benchmark.Netcoreapp11", "src\benchmark\netcoreapp11\Frigate.Benchmark.Netcoreapp11\Frigate.Benchmark.Netcoreapp11.csproj", "{5FD5B5F1-FD1A-487C-8058-94C25CF717EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +23,20 @@ Global
 		{2AE5BF94-6EDF-4E46-BEFB-67B7F314DC2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AE5BF94-6EDF-4E46-BEFB-67B7F314DC2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AE5BF94-6EDF-4E46-BEFB-67B7F314DC2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD5B5F1-FD1A-487C-8058-94C25CF717EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD5B5F1-FD1A-487C-8058-94C25CF717EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD5B5F1-FD1A-487C-8058-94C25CF717EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD5B5F1-FD1A-487C-8058-94C25CF717EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2AE5BF94-6EDF-4E46-BEFB-67B7F314DC2F} = {8DB9BBE0-7599-4784-892C-474167F41BC5}
+		{484F549B-7C0D-45F3-8ED5-B234440EBDAA} = {690ECA64-5F19-4F8D-B4D4-DB3012E98163}
+		{5FD5B5F1-FD1A-487C-8058-94C25CF717EA} = {484F549B-7C0D-45F3-8ED5-B234440EBDAA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4754677-BEB2-403D-9F98-33A71449D80A}
 	EndGlobalSection
 EndGlobal
