@@ -173,24 +173,42 @@ namespace Frigate
         }
     }
 
-    // padding before/between/after fields based on typical cache line size of 64
-    [StructLayout(LayoutKind.Explicit, Size = 192)]
-    internal struct PaddedHeadAndTail
+    // see - https://github.com/dotnet/corefx/blob/master/src/Common/src/System/Collections/Concurrent/SingleProducerConsumerQueue.cs#L306
+    internal static class PaddingHelpers
     {
-        [FieldOffset(64)]
-        public long Head;
-
-        [FieldOffset(128)]
-        public long Tail;
+        /// <summary>A size greater than or equal to the size of the most common CPU cache lines.</summary>
+        internal const int CACHE_LINE_SIZE = 128;
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 192)]
+    [StructLayout(LayoutKind.Explicit, Size = PaddingHelpers.CACHE_LINE_SIZE - sizeof(int))] // Based on common case of 64-byte cache lines
+    internal struct Pad { }
+
+    // padding before/between/after fields based on typical cache line size of 64-byte cache lines
+    [StructLayout(LayoutKind.Sequential)]
+    internal struct PaddedHeadAndTail
+    {
+        private readonly Pad pad0;
+
+        public long Head;
+
+        private readonly Pad pad1;
+
+        public long Tail;
+
+        private readonly Pad pad2;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
     internal struct PaddedMaskAndCapacity
     {
-        [FieldOffset(64)]
+        private readonly Pad pad0;
+
         public int Capacity;
 
-        [FieldOffset(128)]
+        private readonly Pad pad1;
+
         public long Mask;
+
+        private readonly Pad pad2;
     }
 }
