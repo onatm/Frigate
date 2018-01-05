@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netcoreapp11", "netcoreapp1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frigate.Benchmark.Netcoreapp11", "src\benchmark\netcoreapp11\Frigate.Benchmark.Netcoreapp11\Frigate.Benchmark.Netcoreapp11.csproj", "{5FD5B5F1-FD1A-487C-8058-94C25CF717EA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netcoreapp20", "netcoreapp20", "{16987D96-96DE-4677-99DE-D121B121031C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frigate.Benchmark.Netcoreapp20", "src\benchmark\netcoreapp20\Frigate.Benchmark.Netcoreapp20\Frigate.Benchmark.Netcoreapp20.csproj", "{ECBE43C9-3486-492C-842C-3F7909ACCF55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,10 @@ Global
 		{5FD5B5F1-FD1A-487C-8058-94C25CF717EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FD5B5F1-FD1A-487C-8058-94C25CF717EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FD5B5F1-FD1A-487C-8058-94C25CF717EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECBE43C9-3486-492C-842C-3F7909ACCF55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECBE43C9-3486-492C-842C-3F7909ACCF55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECBE43C9-3486-492C-842C-3F7909ACCF55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECBE43C9-3486-492C-842C-3F7909ACCF55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,6 +43,8 @@ Global
 		{2AE5BF94-6EDF-4E46-BEFB-67B7F314DC2F} = {8DB9BBE0-7599-4784-892C-474167F41BC5}
 		{484F549B-7C0D-45F3-8ED5-B234440EBDAA} = {690ECA64-5F19-4F8D-B4D4-DB3012E98163}
 		{5FD5B5F1-FD1A-487C-8058-94C25CF717EA} = {484F549B-7C0D-45F3-8ED5-B234440EBDAA}
+		{16987D96-96DE-4677-99DE-D121B121031C} = {690ECA64-5F19-4F8D-B4D4-DB3012E98163}
+		{ECBE43C9-3486-492C-842C-3F7909ACCF55} = {16987D96-96DE-4677-99DE-D121B121031C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4754677-BEB2-403D-9F98-33A71449D80A}
