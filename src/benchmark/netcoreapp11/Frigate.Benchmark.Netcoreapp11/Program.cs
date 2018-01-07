@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Attributes.Jobs;
 using BenchmarkDotNet.Running;
 
 namespace Frigate.Benchmark.Netcoreapp11
@@ -15,9 +14,7 @@ namespace Frigate.Benchmark.Netcoreapp11
         {
             var summary = BenchmarkRunner.Run<MpscQueueVsConcurrentQueue>();
         }
-
-        [DisassemblyDiagnoser(printAsm: true, printSource: true)]
-        [RyuJitX64Job]
+        
         public class MpscQueueVsConcurrentQueue
         {
             private const int CAPACITY = 320000;
