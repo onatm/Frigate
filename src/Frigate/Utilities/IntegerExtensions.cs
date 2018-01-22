@@ -2,7 +2,7 @@
 {
     public class IntegerExtensions
     {
-        public static int RoundToPowerOfTwo(int v)
+        public static int RoundUpToPowerOfTwo(int v)
         {
             if (v <= 2)
             {

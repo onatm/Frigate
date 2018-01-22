@@ -61,7 +61,7 @@ namespace Frigate
 
         public MpscQueue(int capacity)
         {
-            maskAndCapacity.Capacity = IntegerExtensions.RoundToPowerOfTwo(capacity);
+            maskAndCapacity.Capacity = IntegerExtensions.RoundUpToPowerOfTwo(capacity);
             maskAndCapacity.Mask = maskAndCapacity.Capacity - 1;
             circularBuffer = new T[Capacity + CircularArrayOffsetCalculator.BufferPad * 2];
         }
